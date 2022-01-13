@@ -140,10 +140,17 @@ public class Prac1M3 {
 
         System.out.println("Quin equip vols modifigar?");
         // llistem el equips que tenim
+        int llistat = 1;
         for (int i = 0; equips[i] != null; i++) {
-            System.out.println(i + ". " + equips[i]);
+            System.out.println(llistat + ". " + equips[i]);
+
+            llistat++;
         }
-        int opsio = teclat.nextInt();
+        int res = teclat.nextInt();
+        int opsio = res - 1;
+
+        System.out.println(equips[opsio] + ": " + puntuacions[opsio][0] + "," + puntuacions[opsio][1] + ","
+                + puntuacions[opsio][2] + "," + puntuacions[opsio][3] + "," + puntuacions[opsio][4]);
 
         System.out.println("Vols modifigar el nom?");
         String mod = teclat.next();
